@@ -111,7 +111,7 @@
         YaST will pickup the first harddisk.
         This is useful if someone wants to deploy using VirtualBox and/or KVM/virtio
       -->
-      <!-- <device>/dev/sda</device> -->
+      <!-- <device>/dev/vda</device> -->
       <!-- This section may be removed entirely if we want to simply reuse YaST defaults -->
       <enable_snapshots config:type="boolean">false</enable_snapshots>
       <initialize config:type="boolean">true</initialize>
