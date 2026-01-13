@@ -68,7 +68,7 @@ locals {
       local.host_os == "darwin" ? (
         var.os_arch == "aarch64" ? "/opt/homebrew/share/qemu/edk2-aarch64-code.fd" : "/usr/local/share/qemu/edk2-x86_64-code.fd"
         ) : (
-        var.os_arch == "aarch64" ? "/usr/local/share/qemu/edk2-aarch64-code.fd" : "/usr/local/share/qemu/edk2-x86_64-code.fd"
+        var.os_arch == "aarch64" ? "/usr/local/share/qemu/edk2-aarch64-code.fd" : "/usr/share/OVMF/OVMF_CODE.fd"
       )
     ) : var.qemu_efi_firmware_code
   ) : null
@@ -77,7 +77,7 @@ locals {
       local.host_os == "darwin" ? (
         var.os_arch == "aarch64" ? "/opt/homebrew/share/qemu/edk2-arm-vars.fd" : "/usr/local/share/qemu/edk2-i386-vars.fd"
         ) : (
-        var.os_arch == "aarch64" ? "/usr/local/share/qemu/edk2-arm-vars.fd" : "/usr/local/share/qemu/edk2-i386-vars.fd"
+        var.os_arch == "aarch64" ? "/usr/local/share/qemu/edk2-arm-vars.fd" : "/usr/share/OVMF/OVMF_VARS.fd"
       )
     ) : var.qemu_efi_firmware_vars
   ) : null
